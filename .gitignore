@@ -6,6 +6,9 @@ __pycache__/
 # C extensions
 *.so
 
+#Prompt for project
+prompt.txt
+
 # Distribution / packaging
 .Python
 build/

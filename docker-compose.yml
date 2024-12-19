@@ -1,0 +1,30 @@
+version: '3.8'
+
+services:
+  db:
+    image: ankane/pgvector:latest  # Используем образ с PGVector
+    restart: always
+    env_file:
+      - .env
+    volumes:
+      - db_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "PGPASSWORD=$${POSTGRES_PASSWORD} psql -U $${POSTGRES_USER} -d $${POSTGRES_DB} -c 'SELECT 1'"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+
+  app:
+    build: .
+    restart: always
+    depends_on:
+      db:
+        condition: service_healthy
+    env_file:
+      - .env
+    volumes:
+      - .:/app
+    command: sh -c "alembic upgrade head && python -m app.main"
+
+volumes:
+  db_data:

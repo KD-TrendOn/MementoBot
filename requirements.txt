@@ -1,0 +1,15 @@
+aiogram==2.25.1
+SQLAlchemy
+asyncpg
+alembic
+python-dotenv==1.0.0
+boto3==1.26.0  # Если используешь AWS S3
+psycopg2-binary==2.9.6
+pgvector==0.3.0  # Добавляем pgvector
+langchain-openai
+langchain-google-cloud-sql-pg
+langchain-core
+langchain-community
+langchain-text-splitters
+langchain
+langgraph
