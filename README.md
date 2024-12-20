@@ -1,2 +1,30 @@
-# MementoBot
-A bot that can manage and retrieve your essential memories
+# Memgpt Bot
+
+Краткое описание проекта: этот проект представляет собой телеграм-бота с возможностями обработки естественного языка и сохранения воспоминаний пользователя.
+
+## Структура проекта
+
+- `Dockerfile` — описание контейнера приложения.
+- `docker-compose.yml` — определение сервисов и их взаимодействие.
+- `alembic/` — директория для миграций базы данных.
+- `app/` — основное приложение, содержащее логику бота и взаимодействие с базой данных.
+- `requirements.txt` — список зависимостей Python.
+
+## Установка и запуск
+
+1. Склонируйте репозиторий:
+   ```bash
+   git clone https://github.com/KD-TrendOn/MementoBot.git
+   ```
+
+2. Перейдите в директорию проекта:
+   ```bash
+   cd MementoBot
+   ```
+
+3. Запустите контейнеры с помощью Docker Compose:
+   ```bash
+   docker-compose up --build -d
+   docker-compose logs -f
+   ```
+```
