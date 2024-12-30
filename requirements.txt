@@ -4,3 +4,6 @@ psycopg-binary
 alembic
 asyncpg
 sqlalchemy[asyncio]
+langchain
+langchain-core
+langchain-openai
