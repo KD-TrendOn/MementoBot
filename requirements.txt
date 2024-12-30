@@ -7,3 +7,4 @@ sqlalchemy[asyncio]
 langchain
 langchain-core
 langchain-openai
+langgraph
